@@ -13,6 +13,7 @@ end
 Given(/^Guard is bundled using source$/) do
   gems = @gems || []
   gems << "gem 'guard', path: File.expand_path(File.join(Dir.pwd, '..', '..'))"
+  gems << "gem 'rb-inotify', path: File.expand_path(File.join(Dir.pwd, '..', '..', '..'))"
 
   write_file("Gemfile", "#{gems.join("\n")}\n")
 

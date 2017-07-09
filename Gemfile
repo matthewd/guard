@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gemspec unless ENV["USE_INSTALLED_GUARD"] == "1"
+gem "rb-inotify", path: ".."
 
 gem "rake"
 
